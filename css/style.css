@@ -565,6 +565,10 @@ footer .social {
   min-width: 350px;
 }
 
+.form::placeholder {
+  margin-left: 15px;
+}
+
 .f-button {
   position: relative;
   background-color: #2196f3;
@@ -585,7 +589,6 @@ footer .social {
   top: 50%;
   left: 50%;
   transform: translate(150%, -50%);
-  /* margin-left: 10px; */
   opacity: 0;
   transition-duration: 350ms;
   transition-delay: 100ms;
@@ -752,4 +755,59 @@ h2 {
   line-height: 1.56;
   padding: 63px 24px;
   text-align: left;
+}
+
+/* modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 530px;
+  height: 580px;
+  padding: 40px;
+
+  font-style: inherit;
+  box-sizing: border-box;
+
+  background-color: #fff;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.form-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal h1 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  margin-bottom: 30px;
+
+  color: #212121;
 }

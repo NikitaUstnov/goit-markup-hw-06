@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
+  <!-- <script src="./javascript/script.js"></script> -->
 </head>
 
 <body>
@@ -402,17 +403,70 @@
         <form class="form-item">
 
           <input class="form" type="email" name="" id="" placeholder="E-mail" />
-          <button class="f-button">
-            <p>Подписаться</p>
+          <button data-open-modal class="f-button">
+            <!-- <p>Подписаться</p>
             <svg class="button-svg" width="24" height="24">
               <use href="./images/symbol-defs.svg#icon-send"></use>
-            </svg>
+            </svg> -->
           </button>
+
         </form>
-      </div>
+      </div>                      
     </div>
     <!-- <small class="copyrights">2020 | Developed by GoIT Students</small> -->
   </footer>
+
+  <!-- modal -->
+
+ <div class="backdrop is-hidden" data-backdrop>
+    <div class="modal">
+      <button data-close-modal>
+      </button>
+      <h1>Оставьте свои данные, мы вам перезвоним</h1>
+      <form class="form-items">
+    
+        <label for="name">Имя</label>
+        <input type="name" name="name" id="name" placeholder="Имя">
+    
+        <label for="tel">Телефон</label>
+        <input type="tel" name="tel" id="tel" placeholder="Телефон">
+    
+        <label for="email">Почта</label>
+        <input type="email" name="email" id="email" placeholder="@mail.com">
+    
+        <label for="textarea">Коментарий</label>
+        <input type="textaria" name="textaria" placeholder="Комментарий">
+    
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox">
+          Соглашаюсь с рассылкой и принимаю <a target="_blank"
+            href="https://www.meme-arsenal.com/memes/58b050121651ebed287cc2edef0705cb.jpg">Условия договора</a>
+        </label>
+      </form>
+    
+    </div>
+ </div>
+
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector('[data-open-modal]'),
+        closeModalBtn: document.querySelector('[data-close-modal]'),
+        backdrop: document.querySelector('[data-backdrop]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      refs.backdrop.addEventListener('click', logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle('is-hidden');
+      }
+
+      function logBackdropClick() {
+        console.log('Это клик в бекдроп');
+      }
+    </script>
 </body>
 
 </html>
