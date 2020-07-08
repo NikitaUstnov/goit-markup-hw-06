@@ -50,7 +50,7 @@
 
     <section class="hero-container">
       <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-      <button class="hero-button"><span class="hero-button-text">Заказать услугу</span></button>
+      <button data-modal-open class="hero-button"><span class="hero-button-text">Заказать услугу</span></button>
     </section>
 
 
@@ -403,7 +403,7 @@
         <form class="form-item">
 
           <input class="form" type="email" name="" id="" placeholder="E-mail" />
-          <button data-open-modal class="f-button">
+          <button  class="f-button">
             <!-- <p>Подписаться</p>
             <svg class="button-svg" width="24" height="24">
               <use href="./images/symbol-defs.svg#icon-send"></use>
@@ -418,54 +418,69 @@
 
   <!-- modal -->
 
- <div class="backdrop is-hidden" data-backdrop>
+ <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <button data-close-modal>
+      <button class="close-modal-btn" data-modal-close>
+        <svg width="11" height="11">
+          <use href="./images/symbol-defs.svg#icon-close"></use>
+        </svg>
       </button>
       <h1>Оставьте свои данные, мы вам перезвоним</h1>
       <form class="form-items">
     
-        <label for="name">Имя</label>
-        <input type="name" name="name" id="name" placeholder="Имя">
-    
-        <label for="tel">Телефон</label>
-        <input type="tel" name="tel" id="tel" placeholder="Телефон">
-    
-        <label for="email">Почта</label>
-        <input type="email" name="email" id="email" placeholder="@mail.com">
-    
-        <label for="textarea">Коментарий</label>
-        <input type="textaria" name="textaria" placeholder="Комментарий">
-    
-        <input type="checkbox" id="checkbox">
-        <label for="checkbox">
-          Соглашаюсь с рассылкой и принимаю <a target="_blank"
-            href="https://www.meme-arsenal.com/memes/58b050121651ebed287cc2edef0705cb.jpg">Условия договора</a>
-        </label>
+        <div class="form-field">
+          <input class="input-item" type="name" name="name" id="name" placeholder="">
+          <label class="label-item" for="name">Имя</label>
+          <svg class="input-svg" width="12" height="12">
+            <use href="./images/symbol-defs.svg#icon-name">
+            </use>
+          </svg>
+        </div>
+        <div class="form-field">
+          <input class="input-item" type="tel" name="tel" id="tel" placeholder="">
+          <label class="label-item" for="tel">Телефон</label>
+          <svg class="input-svg" width="13" height="13">
+            <use href="./images/symbol-defs.svg#icon-phone">
+            </use>
+          </svg>
+        </div>
+        <div class="form-field">
+          <input class="input-item" type="email" name="email" id="email" placeholder="">
+          <label class="label-item" for="email">Почта</label>
+          <svg class="input-svg" width="15" height="12">
+            <use href="./images/symbol-defs.svg#icon-maillist">
+            </use>
+          </svg>
+        </div>
+        <div class="form-field">
+          <input class="input-item comment" type="textaria" name="textaria" placeholder="">
+          <label class="label-item comment" for="textarea">Коментарий</label>
+          <!-- <use width="" height="">
+            <svg href="./images/symbol-defs.svg#">
+            </svg> -->
+          
+        </div>
+        
+        <!-- <input type="checkbox" id="checkbox">
+        <label for="checkbox"></label> -->
+          <div class="confirm">
+            <div class="checkbox">
+              <svg class="checkbox-svg" width="11" height="8">
+                <use href="./images/symbol-defs.svg#icon-checkbox">
+                </use>
+              </svg>
+            </div>
+              <p>Соглашаюсь с рассылкой и принимаю <a target="_blank"
+                  href="https://www.meme-arsenal.com/memes/58b050121651ebed287cc2edef0705cb.jpg">Условия договора</a></p>
+          </div>    
+        <button class="submit-btn" type="submit
+              ">Отправить</button>
       </form>
-    
+     
     </div>
  </div>
 
-    <script>
-      const refs = {
-        openModalBtn: document.querySelector('[data-open-modal]'),
-        closeModalBtn: document.querySelector('[data-close-modal]'),
-        backdrop: document.querySelector('[data-backdrop]'),
-      };
-
-      refs.openModalBtn.addEventListener('click', toggleModal);
-      refs.closeModalBtn.addEventListener('click', toggleModal);
-
-      refs.backdrop.addEventListener('click', logBackdropClick);
-
-      function toggleModal() {
-        refs.backdrop.classList.toggle('is-hidden');
-      }
-
-      function logBackdropClick() {
-        console.log('Это клик в бекдроп');
-      }
+    <script src="./javascript/script.js">
     </script>
 </body>
 
