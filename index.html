@@ -402,12 +402,12 @@
         <p class="join">Подпишитесь на рассылку</p>
         <form class="form-item">
 
-          <input class="form" type="email" name="" id="" placeholder="E-mail" />
+          <input class="form" type="email" name="mail" placeholder="E-mail" />
           <button  class="f-button">
-            <!-- <p>Подписаться</p>
+            <p>Подписаться</p>
             <svg class="button-svg" width="24" height="24">
               <use href="./images/symbol-defs.svg#icon-send"></use>
-            </svg> -->
+            </svg>
           </button>
 
         </form>
@@ -429,7 +429,7 @@
       <form class="form-items">
     
         <div class="form-field">
-          <input class="input-item" type="name" name="name" id="name" placeholder="">
+          <input class="input-item" type="name" name="name" id="name" placeholder=" ">
           <label class="label-item" for="name">Имя</label>
           <svg class="input-svg" width="12" height="12">
             <use href="./images/symbol-defs.svg#icon-name">
@@ -437,7 +437,7 @@
           </svg>
         </div>
         <div class="form-field">
-          <input class="input-item" type="tel" name="tel" id="tel" placeholder="">
+          <input class="input-item" type="tel" name="tel" id="tel" placeholder=" ">
           <label class="label-item" for="tel">Телефон</label>
           <svg class="input-svg" width="13" height="13">
             <use href="./images/symbol-defs.svg#icon-phone">
@@ -445,7 +445,7 @@
           </svg>
         </div>
         <div class="form-field">
-          <input class="input-item" type="email" name="email" id="email" placeholder="">
+          <input class="input-item" type="email" name="email" id="email" placeholder=" ">
           <label class="label-item" for="email">Почта</label>
           <svg class="input-svg" width="15" height="12">
             <use href="./images/symbol-defs.svg#icon-maillist">
@@ -453,31 +453,18 @@
           </svg>
         </div>
         <div class="form-field">
-          <input class="input-item comment" type="textaria" name="textaria" placeholder="">
+          <input class="input-item comment" type="textaria" name="textaria" placeholder=" ">
           <label class="label-item comment" for="textarea">Коментарий</label>
-          <!-- <use width="" height="">
-            <svg href="./images/symbol-defs.svg#">
-            </svg> -->
-          
         </div>
-        
-        <!-- <input type="checkbox" id="checkbox">
-        <label for="checkbox"></label> -->
-          <div class="confirm">
-            <div class="checkbox">
-              <svg class="checkbox-svg" width="11" height="8">
-                <use href="./images/symbol-defs.svg#icon-checkbox">
-                </use>
-              </svg>
-            </div>
-              <p>Соглашаюсь с рассылкой и принимаю <a target="_blank"
-                  href="https://www.meme-arsenal.com/memes/58b050121651ebed287cc2edef0705cb.jpg">Условия договора</a></p>
-          </div>    
-        <button class="submit-btn" type="submit
-              ">Отправить</button>
+    
+        <label class="checkbox">
+                <input class="checkbox-field visually-hidden" type="checkbox">
+                <span class="checkbox-label">Cоглашаюсь с рассылкой и принимаю <a target="_blank"
+                href="https://www.meme-arsenal.com/memes/58b050121651ebed287cc2edef0705cb.jpg"> Условия договора</a></span>
+        </label>    
+               <button class="submit-btn" type="submit">Отправить</button>
       </form>
-     
-    </div>
+     </div>
  </div>
 
     <script src="./javascript/script.js">
